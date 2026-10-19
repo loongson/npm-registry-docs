@@ -1,4 +1,4 @@
-# AI Agent 工具包使用教程
+# AI Agent专题文档
 
 > 部分工具包**仅提供 ABI2.0 平台移植版本**，无法在ABI1.0环境安装运行。安装前请确认LoongArch系统的ABI版本，留意各软件包标注的ABI适配范围。
 
@@ -31,7 +31,7 @@ $ npm config get registry
 
 ## 2. 软件包使用说明
 
-### 2.1 软件包：@deepseek-ai/dsh
+### 2.1 软件包：deepseek-harness
 
 - **支持 ABI**：ABI1.0 (0.1.1‑rc.2)｜ABI2.0 (0.1.1‑rc.2 ~ 最新)
 - **Node 版本要求**：>=v22.16.0
