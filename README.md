@@ -5,7 +5,7 @@ LoongArch npm私有源配套文档仓库，包含AI-Agent工具包教程、Elect
 
 
 - [LoongArch npm 仓库地址配置](#1-loongarch-npm-仓库地址配置)
-- [AI Agent 工具包使用教程](./docs/AI‑Agent工具包使用教程.md)
+- [AI Agent专题文档](./docs/AI-Agent专题文档.md)
 - [Electron‑Builder 使用教程](./docs/Electron‑Builder使用教程.md)
 - [Electron‑Packager 使用教程](./docs/Electron‑Packager使用教程.md)
 - [ABI1.0 已移植包统计列表](./stats/abi1.0_packages_stats.md)
