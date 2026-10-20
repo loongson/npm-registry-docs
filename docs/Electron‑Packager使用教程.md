@@ -1,5 +1,7 @@
 # Electron‑Packager 使用教程
 
+> 适用架构：LoongArch（龙芯）ABI1.0 | ABI2.0
+
 `@electron/packager` 是Electron官方社区维护的应用打包工具，它的核心作用是把Electron 网页前端代码、项目资源，和对应平台架构的Electron二进制运行时合并，输出一个无需额外依赖、可以直接运行的应用程序目录，不会直接输出deb /rpm安装包。
 
 本文档介绍在LoongArch平台下，使用 `@electron/packager` 打包Electron 应用，再生成`deb`、`rpm`安装包操作流程。
@@ -10,23 +12,15 @@
 - 生成 rpm 包：[electron-installer-redhat](https://github.com/electron-userland/electron-installer-redhat)
 
 ## 1. 配置龙芯 npm 软件源
-LoongArch分为 **ABI1.0 / ABI2.0** 两套ABI，两套仓库互相不兼容，对应独立的npm镜像源，请务必确认系统ABI版本后配置对应npm源。
-### 1.1 查看系统 ABI 版本
-执行以下终端命令，快速识别当前系统的 LoongArch ABI 版本：
-```bash
-$ LC_ALL=C readelf -h /bin/bash  | grep Flags: | awk -F' ' '{ print $2 }'
-```
-结果对应说明：
-- 输出 0x3, → 当前系统为 ABI 1.0
-- 输出 0x43, → 当前系统为 ABI 2.0
+LoongArch分为 **ABI1.0 / ABI2.0** 两套ABI，两套仓库互相不兼容，对应独立的npm镜像源，请先确认系统 ABI 版本，再配置匹配的源。ABI 查看方式详见：[设置 npm 镜像源方法](../README.md)。
 
-### 1.2 ABI1.0 环境配置源
-```bash
-$ npm set registry https://registry.loongnix.cn:4873
+### ABI1.0 环境配置
 ```
-### 1.3 ABI2.0 环境配置源
-```bash
-$ npm set registry https://registry.loongnix.cn:5873
+npm set registry https://registry.loongnix.cn:4873
+```
+### ABI2.0 环境配置
+```
+npm set registry https://registry.loongnix.cn:5873
 ```
 ## 2. 安装依赖软件包
 安装 @electron/packager 打包工具（支持列表可见[ABI1.0 已移植包统计列表](../stats/abi1.0_packages_stats.md) / [ABI2.0 已移植包统计列表](../stats/abi2.0_packages_stats.md))

@@ -1,7 +1,13 @@
-# 使用nvm安装Node.js教程
+# 使用 nvm 安装 Node.js 教程
 
-## 一、通过nvm安装Node.js
-nvm是Node.js版本管理器，可便捷实现多版本Node.js的安装、切换、查看等操作。以下以安装Node.js v14.16.1为例说明步骤。
+> 适用架构：LoongArch（龙芯）ABI1.0 | ABI2.0
+
+参考文档：
+- Node.js 中文文档：[https://nodejs.cn/learn/introduction-to-nodejs](https://nodejs.cn/learn/introduction-to-nodejs)
+- nvm 官方文档：[https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+
+## 一、安装 nvm
+nvm 是 Node.js 版本管理器，可实现多版本 Node.js 的一键安装、切换、查询，适合开发环境多版本管理。
 
 ### 1.1 一键安装 nvm
 任选以下一种命令执行官方安装脚本：
@@ -17,18 +23,19 @@ $ wget -qO- https://ftp.loongnix.cn/nodejs/npm-registry/LoongArch/abi-v1.0/nvm/v
 > 脚本执行说明：
 > 1. 自动下载nvm核心脚本（nvm-exec、bash_completion、nvm.sh）；
 > 2. 脚本统一存放至~/.nvm目录；
-> 3. 自动检测并向shell配置文件（~/.bashrc、~/.bash_profile、~/.zshrc、~/.profile）添加nvm环境变量。
+> 3. 自动检测并向shell配置文件（`~/.bashrc`、`~/.bash_profile`、`~/.zshrc`、`~/.profile`）添加nvm环境变量。
 
 #### 1.2 手动配置 nvm 环境变量（自动配置失败时）
-若终端无法识别nvm命令，执行以下命令临时配置（添加至上述shell配置文件可永久生效）：
+如果执行完脚本后终端提示 `nvm: command not found`，执行下面命令:
 ```
 $ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # 加载nvm核心功能
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # 加载nvm命令补全功能
 ```
 
-### 1.3 查看LoongArch架构支持的Node.js版本
-
+## 二、安装 Node.js
+### 2.1 ABI1.0 环境安装
+1. 查看 LoongArch ABI1.0 支持的全部 Node.js 版本:
 ```
 $ nvm ls-remote node
        v10.24.1   (LTS: Dubnium)
@@ -58,52 +65,53 @@ $ nvm ls-remote node
        v22.1.0
        v22.16.0   (Latest LTS: Jod)
 ```
-> 注：实际显示版本以终端输出为准
-
-### 1.4 安装指定版本Node.js
-
- ```
-$ nvm install 14.16.1
+2. 安装指定版本
 ```
-
-### 1.5 验证安装版本
-
+$ nvm install 22.16.0
+```
+3. 验证安装结果
 ```
 $ node -v
-V14.16.1
+v22.16.0
+```
+### 2.2 ABI2.0 环境安装
+ABI2.0 可安装版本清单参考：[ABI2.0 支持的 Node.js 版本清单](../stats/abi2.0_nodejs_supported_versions.md)
+
+1. 先配置二进制包镜像源
+```
+$ export NVM_NODEJS_ORG_MIRROR="https://unofficial-builds.nodejs.org/download/release/"
+```
+2. 安装目标版本
+```
+$ nvm install v24.8.0
+```
+3. 校验版本
+```
+$ node -v
+v24.8.0
 ```
 
-## 二、运行Hello World程序
-### 2.1 交互模式
-终端输入node进入交互环境，执行代码并实时查看结果：
-
+## 三、运行 Hello World 程序
+### 3.1 交互式命令行模式
+直接输入 `node` 进入 REPL 交互环境，即时执行代码：
 ```
 $ node
 > console.log('Hello World!');
 Hello World!
 >
 ```
-
-### 2.2 脚本模式
-以下是Node.js程序:
-
+### 3.2 脚本文件模式
+1. 创建代码文件
 ```
-# 创建脚本文件：
 $ vim hello-world.js
-
-# 写入代码：
+```
+2. 写入代码内容
+```
 console.log('Hello World!');
-
-# 执行脚本：
+```
+3. 执行脚本
+```
 $ node hello-world.js
 Hello World!
 ```
 
-## See Also：
-npm官方教程文档:  https://www.npmjs.com/package/doc
-
-nodejs中文文档:  https://nodejs.cn/learn/introduction-to-nodejs
-
-nvm官方文档：  https://github.com/nvm-sh/nvm
-
----

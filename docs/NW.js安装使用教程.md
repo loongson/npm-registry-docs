@@ -1,5 +1,10 @@
 # NW.js LoongArch 安装使用教程
+> 适用架构：LoongArch（龙芯）ABI1.0
 
+NW.js（原名 node-webkit）是基于 Chromium + Node.js 的桌面开发框架，可使用 HTML/CSS/JS 开发跨平台桌面应用，同时支持 Web API 与 Node.js 底层系统接口。
+适合快速构建桌面客户端，能够打包为独立程序，无需预装 Node.js。
+
+参考文档：
 - LoongArch版本NW.js下载路径：http://ftp.loongnix.cn/nwjs/LoongArch/
 - NW.js社区文档教程：https://nwjs.readthedocs.io/en/latest/
 
