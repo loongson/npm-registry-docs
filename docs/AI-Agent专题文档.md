@@ -2,6 +2,12 @@
 
 > 部分工具包**仅提供 ABI2.0 平台移植版本**，无法在ABI1.0环境安装运行。安装前请确认LoongArch系统的ABI版本，留意各软件包标注的ABI适配范围。
 
+## 文档导航
+
+- [LoongArch上openclaw使用指南](./LoongArch上openclaw使用指南.md)
+- [LoongArch上deepseek-harness使用指南](./LoongArch上deepseek-harness使用指南.md)
+
+
 ## 1. LoongArch npm 仓库地址配置
 
 LoongArch分为 **ABI1.0 / ABI2.0** 两套ABI，两套仓库互相不兼容，对应独立的npm镜像源，请务必确认系统ABI版本后配置对应npm源。
