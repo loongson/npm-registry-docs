@@ -25,7 +25,7 @@ $ wget -qO- https://ftp.loongnix.cn/nodejs/npm-registry/LoongArch/abi-v1.0/nvm/v
 > 2. 脚本统一存放至~/.nvm目录；
 > 3. 自动检测并向shell配置文件（`~/.bashrc`、`~/.bash_profile`、`~/.zshrc`、`~/.profile`）添加nvm环境变量。
 
-#### 1.2 手动配置 nvm 环境变量（自动配置失败时）
+### 1.2 手动配置 nvm 环境变量（自动配置失败时）
 如果执行完脚本后终端提示 `nvm: command not found`，执行下面命令:
 ```
 $ export NVM_DIR="$HOME/.nvm"
@@ -37,7 +37,7 @@ $ export NVM_DIR="$HOME/.nvm"
 ### 2.1 ABI1.0 环境安装
 1. 查看 LoongArch ABI1.0 支持的全部 Node.js 版本:
 ```
-$ nvm ls-remote node
+$ nvm ls-remote
        v10.24.1   (LTS: Dubnium)
        v10.24.2   (Latest LTS: Dubnium)
        v12.19.1   (LTS: Erbium)

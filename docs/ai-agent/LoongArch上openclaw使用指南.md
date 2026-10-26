@@ -89,7 +89,7 @@ $ openclaw onboard --install-daemon
 
 ![](../../images/tGRaNnNFIE0PGkMOcpZMOYuIq5j_SuVj4gMcOL6BNtg=.png)
 
-10. 跳过后是配置 skills 界面，这个可以选择 No 跳过，后续有需要可以再 openclaw 的 webui 界面配置
+10. 跳过后是配置 skills 界面，这个可以选择 No 跳过，后续有需要可以在 openclaw 的 webui 界面配置
 
 ![](../../images/o6Yu8rdwa_iKerqDCtp4B4Uurarms1tvJ0BhfU8IkyM=.png)
 

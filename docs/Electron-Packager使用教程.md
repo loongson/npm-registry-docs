@@ -1,4 +1,4 @@
-# Electron‑Packager 使用教程
+# Electron-Packager 使用教程
 
 > 适用架构：LoongArch（龙芯）ABI1.0 | ABI2.0
 
@@ -78,7 +78,7 @@ $ ../node_modules/@electron/packager/bin/electron-packager.mjs  . electron-quick
 执行成功后，`dist`目录内会生成完整的、可直接运行的Electron应用程序目录。
 
 #### 3.2.1 打包生成 deb 安装包
-调用 `electron‑installer‑debian`，将上面打包好的程序目录，构建deb安装包：
+调用 `electron-installer-debian`，将上面打包好的程序目录，构建deb安装包：
 ```
 $ ../node_modules/electron-installer-debian/src/cli.js \
   --src dist/electron-quick-start-linux-loong64/ \

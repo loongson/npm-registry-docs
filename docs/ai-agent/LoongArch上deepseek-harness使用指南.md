@@ -35,7 +35,7 @@ $ node --expose-internals ./node_modules/@deepseek-ai/dsh/lib/bin.js web
 ### 2.2 ABI2.0 快速启动
 npx方式无需手动安装包，直接运行：
 ```sh
-$ npx @deepseek/dsh web
+$ npx @deepseek-ai/dsh web
 ```
 ## 三、Web 界面使用流程
 1. 服务启动成功后，终端会输出日志（参考截图）:
