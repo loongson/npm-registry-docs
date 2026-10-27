@@ -11,6 +11,7 @@
 - [LoongArch上open-code-review使用指南](./ai-agent/LoongArch上open-code-review使用指南.md)
 - [LoongArch上codex使用指南](./ai-agent/LoongArch上codex使用指南.md)
 - [LoongArch上pi使用指南](./ai-agent/LoongArch上pi使用指南.md)
+- [LoongArch上qoder使用指南](./ai-agent/LoongArch上qoder使用指南.md)
 
 
 AI 相关文档正在陆续增添中～
