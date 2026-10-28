@@ -125,4 +125,4 @@ $ sudo dnf install ./minimal-repro-1.0.0-1.loongarch64.rpm
 ```bash
 $ minimal-repro
 ```
-![2026-10-20_16-56](../images/2026-10-20%2009-16-56.png)
+![2026-10-20_16-56](../images/electron-packager-01.png)

@@ -163,4 +163,4 @@ $ sudo dnf install ./electron-quick-start-1.0.0.loongarch64.rpm
 ```
 $ electron-quick-start
 ```
-![2026-10-16_16-47](../images/electron-07.png)
+![2026-10-16_16-47](../images/electron-builder-01.png)

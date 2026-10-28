@@ -43,7 +43,7 @@ $ npm install -g openclaw
 $ openclaw -h
 ```
 
-![](../../images/pqVxo5inJKyA-u9XBwD0l0AUYlMttRKIvzDz-PL1n1I=.png)
+![](../../images/openclaw-01.png)
 
 ## 三、openclaw 初始化部署
 
@@ -55,55 +55,55 @@ $ openclaw onboard --install-daemon
 
 1. 输出如下所示，选择 yes 进行部署配置
 
-![](../../images/zg9YShhPZ8ogM9KD6S6sSJV5zI_uodnXpsFxgBFV5Qk=.png)
+![](../../images/openclaw-02.png)
 
 2. 选择yes后到 Onboarding mode 选择模式为快速开始 QuickStart
 
-![](../../images/LaA8Ubqpkk1rjncMwx2KdBLbYZcNLIC1QgYFGyIhoeY=.png)
+![](../../images/openclaw-03.png)
 
 3. 选择快速开始后，出现的界面上面小方框是 openclaw 网关的基础信息，下面列表是挑选AI大模型的供应商，以常用的大模型 MiniMax 为例，选项移到 MiniMax ,输入回车
 
-![](../../images/NygGB2nC9Lz8Z41PvK9D_998LbSCynSASw8JtJQfH5I=.png)
+![](../../images/openclaw-04.png)
 
 4. 回车后，是选择大模型的验证方式界面，选择带 CN 后缀的 API Key 方式，带 CN 后缀是国内使用的大模型网址，Global 后缀是国外使用的大模型网址
 
-![](../../images/9sKkyM7YuhwcCVOYZ_UWJXGYrrAZYJdzipDKtqBGnM4=.png)
+![](../../images/openclaw-05.png)
 
 5. 选择 API Key 的验证方式后，是选择提供 API key 的方式，第一个选项是立即粘贴提供，第二个方式是外部提供，通过环境变量或其他配置项提供，这里选择第一个
 
-![](../../images/76WNqGveuefTSvmTdoNSRAmT3XQEIcqRlpxLu2oJS7s=.png)
+![](../../images/openclaw-06.png)
 
 6. 选择后就是粘贴大模型提供的 API key 到输入光标位置，输入后回车
 
-![](../../images/boI3G4SoDGLF2NlaXzB7lql8lhVjhkE9EtAX7VJMy7k=.png)
+![](../../images/openclaw-07.png)
 
 7. 回车后是选择大模型的版本，这里选择的是 MiniMax-M2.5 的大模型版本，输入回车
 
-![](../../images/5b-dG-NFiKOP9c22X3IN3UTzd_i12QpW8jKoGseFSXo=.png)
+![](../../images/openclaw-08.png)
 
 8. 回车后是选择 channel, 这是对接聊天工具的通道，这里先跳过，后续有需要可以在webui界面自行配置
 
-![](../../images/P80n2kAnjiCnmAdueBc7LKeDkl_leoi3MWl_ubsqw_o=.png)
+![](../../images/openclaw-09.png)
 
 9. 接下来是搜索提供商，当 AI 需要进行网络搜索以获取实时信息时所使用的搜索引擎服务。它决定了 OpenClaw 在执行 web\_search 工具时调用哪个后端搜索服务，这里可以选择跳过
 
-![](../../images/tGRaNnNFIE0PGkMOcpZMOYuIq5j_SuVj4gMcOL6BNtg=.png)
+![](../../images/openclaw-10.png)
 
 10. 跳过后是配置 skills 界面，这个可以选择 No 跳过，后续有需要可以在 openclaw 的 webui 界面配置
 
-![](../../images/o6Yu8rdwa_iKerqDCtp4B4Uurarms1tvJ0BhfU8IkyM=.png)
+![](../../images/openclaw-11.png)
 
 11. 跳过后是 hooks 的配置，这个配置是在发出代理命令时可以自动执行的操作，可以根据需求进行配置，也可以后续在 webui 界面进行配置，这里先跳过，通过空格键选择，回车执行
 
-![](../../images/QYZ9__XksabPt-VxfFA-9V5giF82v8wgQ5Iq_Ain38g=.png)
+![](../../images/openclaw-12.png)
 
 12. 跳过 hooks 配置后 openclaw 会自动安装 openclaw 网关服务，安装完毕后会显示服务安装路径和会话缓存路径，在 control ui 框有 openclaw 的 webui 访问网址链接，可通过网页访问 webui 界面对 openclaw 进行配置和使用
 
-![](../../images/OujY7ismK0GZ2KOW-GmTCrqh40CIklCJNJtvLsJEln8=.png)
+![](../../images/openclaw-13.png)
 
 13. 安装完 openclaw 的网关服务后，可以选择 TUI 和 Web UI 来与 openclaw 进行交流
 
-![](../../images/lRK5iVBiOvm-YAX-mVPBpFYsaGcBUPM4z5HYG-fFW6Q=.png)
+![](../../images/openclaw-14.png)
 
 ## 四、交互使用方式
 网关部署完成，提供两种交互界面：TUI 终端界面、Web UI 网页界面。
@@ -112,14 +112,14 @@ $ openclaw onboard --install-daemon
 
 选择 TUI 的对话界面，光标输入框为交流对话框
 
-![](../../images/oDg22DQc-oOV_MxZm9I0d5oKUcdbfR2lkTQ5kaQu_To=.png)
+![](../../images/openclaw-15.png)
 
 2. Web UI 网页界面
 
 选择 Web UI 的画面，则在浏览器上打开 openclaw 的配置和聊天界面
 
-![](../../images/F5xcVme3VyyvAN5LB05UI5c0bT7DEN0A7ZLEZPwDuhs=.png)
+![](../../images/openclaw-16.png)
 
 > openclaw 的 Web UI 的功能界面在左上角的功能栏，可以根据自己需求进行配置
->![](../../images/ak_Jga4z3m81zI2fzbCI2upNtanLKZ0YdQVBd6BeZ2E=.png)
+>![](../../images/openclaw-17.png)
 
