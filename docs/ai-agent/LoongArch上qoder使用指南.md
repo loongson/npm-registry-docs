@@ -95,12 +95,9 @@ $ sudo qoder --no-sandbox              # 以 root 运行
 $ qoder --no-sandbox --disable-gpu     # 无 GPU 环境（服务器/虚拟屏）
 ```
 
-## 七、升级与卸载
+## 七、卸载
 
 ```sh
-$ # 升级：直接安装新版本 deb 覆盖即可
-$ sudo dpkg -i Qoder-linux-loongarch64-<新版本>.deb
-
 $ # 卸载
 $ sudo dpkg -r qoder
 ```
