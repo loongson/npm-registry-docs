@@ -66,19 +66,19 @@ $ pi
 
 1. 在输入框中输入 `/login` 并回车，进入登录流程，先选择登录方式（账号登录、API Key 登录等）：
 
-   ![选择登录方式](../../images/pi-03.png)
+    ![选择登录方式](../../images/pi-03.png)
 
 2. 选择 `Sign in with an API key` 后进入供应商列表，可直接输入关键字过滤（示例中过滤 `opencode`）：
 
-   ![选择大模型供应商](../../images/pi-04.png)
+    ![选择大模型供应商](../../images/pi-04.png)
 
 3. 选中供应商后输入该供应商提供的 API Key，回车提交：
 
-   ![输入 API Key](../../images/pi-05.png)
+    ![输入 API Key](../../images/pi-05.png)
 
 4. 输入 `/model` 选择要使用的具体模型；列表中带 `✓` 的是当前模型，回车切换，`Ctrl+S` 设为默认：
 
-   ![选择模型](../../images/pi-06.png)
+    ![选择模型](../../images/pi-06.png)
 
 配置完成后，状态栏右侧会显示当前供应商、模型与思考等级（例如 `(opencode-go) deepseek-v4.1-flash · high`）。思考等级可以随时用 `Shift+Tab` 循环切换。
 

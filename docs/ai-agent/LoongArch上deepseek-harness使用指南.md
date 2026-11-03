@@ -1,68 +1,106 @@
 # LoongArch上deepseek-harness使用指南
 
-DeepSeek-Harness 是 DeepSeek 推出的 AI 工具套件，用于本地部署、调用模型并提供配套调试与 Web 服务能力。
+DeepSeek Harness（`dsh`）是 DeepSeek 开源的 agent harness，基于 Cordis 插件框架、采用「一切皆插件」的架构搭建智能体运行环境；提供 Web UI、TUI、后台服务三种运行形态，可接入 DeepSeek 官方模型，也兼容 OpenAI、Anthropic 协议网关，并支持 MCP、技能扩展、自动化任务与会话分享。
 
 上游仓库：[https://github.com/deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness)
 
-官方配置指南：[https://deepseek-harness.github.io/deepseek-harness/guide/providers](https://deepseek-harness.github.io/deepseek-harness/guide/providers)
+官方文档：[https://deepseek-harness.github.io/deepseek-harness/](https://deepseek-harness.github.io/deepseek-harness/)
 
-**版本说明:**
+**版本说明：**
 
-- **ABI1.0版本**：0.1.1-rc.2
-- **ABI2.0版本**：0.1.1-rc.2 ~ 最新版本
+- **ABI1.0 版本**：0.1.1-rc.2
+- **ABI2.0 版本**：0.1.1-rc.2 ~ 最新版本
 - **Node.js 版本要求**：≥ v22.16.0
 - **支持 ABI**：支持 ABI1.0 | ABI2.0
 
-## 一、LoongArch npm 仓库地址配置
-LoongArch分为 **ABI1.0 / ABI2.0** 两套ABI，两套仓库互相不兼容，对应独立的npm镜像源，请先确认系统 ABI 版本，再配置匹配的源。ABI 查看方式详见：[设置 npm 镜像源方法](../../README.md)。
+## 一、配置 LoongArch npm 仓库
+
+LoongArch 分为 **ABI1.0 / ABI2.0** 两套 ABI，两套仓库互相不兼容，请先确认系统 ABI 版本，再配置匹配的源。ABI 查看方式详见：[设置 npm 镜像源方法](../../README.md)。
 
 ### ABI1.0 环境配置
-```
-npm set registry https://registry.loongnix.cn:4873
-```
-### ABI2.0 环境配置
-```
-npm set registry https://registry.loongnix.cn:5873
-```
-## 二、安装并运行deepseek-harness
-### 2.1 ABI1.0 安装 & 启动
+
 ```sh
-# 安装指定版本
-$ npm install @deepseek-ai/dsh@0.1.1-rc.2
-# 启动Web服务
-$ node --expose-internals ./node_modules/@deepseek-ai/dsh/lib/bin.js web
+$ npm set registry https://registry.loongnix.cn:4873
 ```
-### 2.2 ABI2.0 快速启动
-npx方式无需手动安装包，直接运行：
+
+### ABI2.0 环境配置
+
+```sh
+$ npm set registry https://registry.loongnix.cn:5873
+```
+
+## 二、安装并启动 Web UI
+
+### ABI1.0：本地安装后启动
+
+配置好对应源后本地安装（以 0.1.1-rc.2 为例）：
+
+```sh
+$ npm install @deepseek-ai/dsh@0.1.1-rc.2
+```
+安装完成后，确认版本：
+```
+$ ./node_modules/.bin/dsh --version
+0.1.1-rc.2
+```
+启动Web服务
+```
+$ node --expose-internals ./node_modules/@deepseek-ai/dsh/lib/bin.js web
+dsh web: http://127.0.0.1:3080
+```
+
+### ABI2.0：npx 直接运行
+
+无需手动安装，直接拉起 Web UI：
+
 ```sh
 $ npx @deepseek-ai/dsh web
 ```
-## 三、Web 界面使用流程
-1. 服务启动成功后，终端会输出日志（参考截图）:
 
-![2026-10-16_16-09](../../images/deepseek-harness-01.png)
+## 三、打开 Web 界面
 
-2. 在浏览器打开终端给的链接 `http://127.0.0.1:3080`，进入 deepseek-harness Web 页面
+启动成功后终端会打印访问地址：
 
-![2026-10-16_16-16](../../images/deepseek-harness-02.png)
+![dsh 启动日志](../../images/deepseek-harness-01.png)
 
-3. 在弹窗的API Key输入框，填入DeepSeek 大模型API密钥，完成鉴权
+用浏览器打开该地址（默认 `http://127.0.0.1:3080`），首次进入会弹出「预览版说明」，点「继续」即可：
 
-![2026-10-16_16-28](../../images/deepseek-harness-03.png)
+![首次进入的预览版说明](../../images/deepseek-harness-02.png)
 
-4. 选择工作区，大模型将在此工作区进行相关操作，如执行文件读取、代码生成等操作
+接着会提示「开始使用」，提供**登录 DeepSeek 账号**或**添加 API Key** 两种方式，项目与文件都保存在本地：
 
-![2026-10-16_16-29](../../images/deepseek-harness-04.png)
+![开始使用](../../images/deepseek-harness-03.png)
 
-5. 输入指令调用大模型：
+## 四、配置模型
 
-![2026-10-16_16-41](../../images/deepseek-harness-05.png)
+选择「添加 API Key」后，填入 DeepSeek 官方 API Key 并点「保存并继续」即可开始使用；暂时不想配置就点「稍后配置」，之后随时在「设置 → 模型」里补配：
 
-6. 模型生成的文件会保存在所选工作区目录
+![添加一个 API Key 开始使用](../../images/deepseek-harness-04.png)
 
-![2026-10-16_16-47](../../images/deepseek-harness-06.png)
+除了首次引导，打开左下角「更多 → 设置 → 模型」还可以配置两类提供商：
+
+- **DeepSeek**：填入 DeepSeek 官方 API Key；
+- **添加模型提供商**：选择内置的第三方提供商（`anthropic`、`openai`、`moonshotai`、`zai` 等），或切到「自定义模型 API」，填 Provider ID、基础 URL、协议（OpenAI Chat Completions / OpenAI Responses / Anthropic Messages）和至少一个模型 ID。
+
+![设置 → 模型](../../images/deepseek-harness-05.png)
+
+## 五、选择模型并开始对话
+
+配置完成后，点输入框右下角的模型名即可切换（列表按提供商分组）：
+
+![选择模型](../../images/deepseek-harness-06.png)
+
+一个简单的对话示例如下：
+
+![与 DeepSeek Harness 对话](../../images/deepseek-harness-07.png)
 
 
+### 生成的文件保存在所选工作区
 
+让 Agent 新建或修改文件时，改动会直接落到所选的工作区目录。例如让它「在当前工作区创建一个 hello.txt」，回答里会给出文件路径、大小与 diff 卡片：
 
+![Agent 创建文件](../../images/deepseek-harness-08.png)
 
+工作区目录中可以看到实际生成的文件：
+
+![工作区中的文件](../../images/deepseek-harness-09.png)
