@@ -1,4 +1,5 @@
-# NW.js LoongArch 安装使用教程
+# NW.js 安装使用教程
+
 > 适用架构：LoongArch（龙芯）ABI1.0
 
 NW.js（原名 node-webkit）是基于 Chromium + Node.js 的桌面开发框架，可使用 HTML/CSS/JS 开发跨平台桌面应用，同时支持 Web API 与 Node.js 底层系统接口。
@@ -8,8 +9,20 @@ NW.js（原名 node-webkit）是基于 Chromium + Node.js 的桌面开发框架�
 - LoongArch版本NW.js下载路径：http://ftp.loongnix.cn/nwjs/LoongArch/
 - NW.js社区文档教程：https://nwjs.readthedocs.io/en/latest/
 
+## 目录
+
+- [一、NW.js 安装](#sec-1)
+  - [方式 1：二进制 SDK 包安装](#sec-1-1)
+  - [方式 2：npm 包管理器安装](#sec-1-2)
+- [二、运行 Hello World 示例](#sec-2)
+
+<a id="sec-1"></a>
+
 ## 一、NW.js 安装
 本文以 **v0.59.2** 版本为例，提供两种安装方式：二进制 SDK 包安装、npm 包管理器安装。
+
+<a id="sec-1-1"></a>
+
 ### 方式 1：二进制 SDK 包安装
 
 1. 下载压缩包
@@ -29,6 +42,8 @@ $ ./nw
 
 ![](../images/nwjs-02.png)
 
+<a id="sec-1-2"></a>
+
 ### 方式 2：npm 包管理器安装
 
 #### 步骤 1：配置龙芯 npm 源
@@ -44,14 +59,19 @@ $ sudo npm config get registry
 输出 `https://registry.loongnix.cn:4873/` 即配置成功。
 
 #### 步骤 2：执行安装
+
 ##### （1）全局安装
 ```
 $ sudo npm install nw@0.59.2 -g
 ```
+
 ##### （2）项目本地安装
 ```
 $ npm install nw@0.59.2
 ```
+
+<a id="sec-2"></a>
+
 ## 二、运行 Hello World 示例
 
 ### 步骤 1：创建项目目录
@@ -59,6 +79,7 @@ $ npm install nw@0.59.2
 $ mkdir example
 $ cd example
 ```
+
 ### 步骤 2：新建应用配置 package.json
 ```
 $ vim package.json

@@ -1,10 +1,24 @@
-# 使用 nvm 安装 Node.js 教程
+# Node.js 安装使用教程
 
 > 适用架构：LoongArch（龙芯）ABI1.0 | ABI2.0
 
+Node.js发布于2009年5月，由Ryan Dahl开发，Node.js 是一个开源与跨平台的 JavaScript 运行时环境，实际上是对Google V8 引擎进行了封装，它是一个可用于几乎任何项目的流行工具。
+
 参考文档：
-- Node.js 中文文档：[https://nodejs.cn/learn/introduction-to-nodejs](https://nodejs.cn/learn/introduction-to-nodejs)
-- nvm 官方文档：[https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+
+- Node.js 中文文档：https://nodejs.cn/learn/introduction-to-nodejs
+- nvm 官方文档：https://github.com/nvm-sh/nvm
+- ABI2.0 可安装版本清单：[LoongArch ABI2.0 Node.js 版本清单](../stats/abi2.0_nodejs_supported_versions.md)
+
+## 目录
+
+- [一、安装 nvm](#sec-1)
+- [二、安装 Node.js](#sec-2)
+  - [2.1 ABI1.0 环境安装](#sec-2-1)
+  - [2.2 ABI2.0 环境安装](#sec-2-2)
+- [三、运行 Hello World 程序](#sec-3)
+
+<a id="sec-1"></a>
 
 ## 一、安装 nvm
 nvm 是 Node.js 版本管理器，可实现多版本 Node.js 的一键安装、切换、查询，适合开发环境多版本管理。
@@ -33,7 +47,11 @@ $ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # 加载nvm命令补全功能
 ```
 
+<a id="sec-2"></a>
+
 ## 二、安装 Node.js
+<a id="sec-2-1"></a>
+
 ### 2.1 ABI1.0 环境安装
 1. 查看 LoongArch ABI1.0 支持的全部 Node.js 版本:
 ```
@@ -74,6 +92,8 @@ $ nvm install 22.16.0
 $ node -v
 v22.16.0
 ```
+<a id="sec-2-2"></a>
+
 ### 2.2 ABI2.0 环境安装
 ABI2.0 可安装版本清单参考：[ABI2.0 支持的 Node.js 版本清单](../stats/abi2.0_nodejs_supported_versions.md)
 
@@ -90,6 +110,8 @@ $ nvm install v24.8.0
 $ node -v
 v24.8.0
 ```
+
+<a id="sec-3"></a>
 
 ## 三、运行 Hello World 程序
 ### 3.1 交互式命令行模式
@@ -114,4 +136,3 @@ console.log('Hello World!');
 $ node hello-world.js
 Hello World!
 ```
-

@@ -6,8 +6,9 @@ LoongArch npm私有源配套文档仓库，包含AI-Agent工具包教程、Elect
 
 - [LoongArch npm 仓库地址配置](#loongarch-npm-仓库地址配置)
 - [AI Agent专题文档](./docs/AI-Agent专题文档.md) :fire:
-- [使用 nvm 安装 Node.js 教程](./docs/使用nvm安装Node.js教程.md)
+- [Node.js 安装使用教程](./docs/Node.js安装使用教程.md)
 - [NW.js 安装使用教程](./docs/NW.js安装使用教程.md)
+- [Electron 安装使用教程](./docs/Electron安装使用教程.md)
 - [Electron-Builder 使用教程](./docs/Electron-Builder使用教程.md)
 - [Electron-Packager 使用教程](./docs/Electron-Packager使用教程.md)
 - [ABI1.0 已移植包统计列表](./stats/abi1.0_packages_stats.md)
