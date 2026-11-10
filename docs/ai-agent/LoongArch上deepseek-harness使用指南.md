@@ -9,7 +9,7 @@ DeepSeek Harness（`dsh`）是 DeepSeek 开源的 agent harness，基于 Cordis 
 **版本说明：**
 
 - **ABI1.0 版本**：0.1.1-rc.2
-- **ABI2.0 版本**：0.1.1-rc.2 ~ 最新版本
+- **ABI2.0 版本**：0.1.1-rc.2 ~ 0.2.2-rc.1
 - **Node.js 版本要求**：≥ v22.16.0
 - **支持 ABI**：支持 ABI1.0 | ABI2.0
 
