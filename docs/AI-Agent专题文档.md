@@ -1,6 +1,6 @@
 # AI Agent专题文档 :fire:
 
-注意：部分工具包仅提供 ABI2.0 移植版本，不支持 ABI1.0。安装前请确认当前 LoongArch 系统 ABI 版本，查看方法参考：[查看系统 ABI 版本方法](../README.md)，请留意各软件包标注的 ABI 适配范围。
+注意：工具包分 ABI1.0、ABI2.0 移植版本，安装前请确认当前 LoongArch 系统 ABI 版本，查看方法参考：[查看系统 ABI 版本方法](../README.md)，请留意各软件包标注的 ABI 支持范围。
 
 ## 文档导航
 
@@ -8,6 +8,7 @@
 
 - [LoongArch上codebuddy使用指南](./ai-agent/LoongArch上codebuddy使用指南.md)
 - [LoongArch上codex使用指南](./ai-agent/LoongArch上codex使用指南.md)
+- [LoongArch上continue-cli使用指南](./ai-agent/LoongArch上continue-cli使用指南.md)
 - [LoongArch上deepseek-harness使用指南](./ai-agent/LoongArch上deepseek-harness使用指南.md)
 - [LoongArch上openclaw使用指南](./ai-agent/LoongArch上openclaw使用指南.md)
 - [LoongArch上opencode使用指南](./ai-agent/LoongArch上opencode使用指南.md)
