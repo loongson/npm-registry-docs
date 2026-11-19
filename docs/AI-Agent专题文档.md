@@ -20,5 +20,9 @@
 
 - [LoongArch上open-code-review使用指南](./ai-agent/LoongArch上open-code-review使用指南.md)
 
+### 本地 AI 模型
+
+- [LoongArch上本地AI图片与LLM模型使用指南](./ai-agent/LoongArch上本地AI图片与LLM模型使用指南.md)
+
 AI 相关文档正在陆续增添中～
 
