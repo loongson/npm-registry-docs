@@ -4,19 +4,17 @@ Qoder 是面向真实软件开发的 Agentic 编码平台：智能体围绕「�
 
 官方文档：[https://docs.qoder.com/zh](https://docs.qoder.com/zh)
 
-LoongArch 官方 deb 包：[Qoder-linux-loongarch64.deb](https://download.qoder.com.cn/qoder-app/releases/latest/Qoder-linux-loongarch64.deb)
-
 **版本说明：**
 
-- **可用版本**：`1:0.4.11`
+- **可用版本**：`0.4.9`、`0.4.10`、`0.4.11`
 - **支持 ABI**：**仅 ABI1.0**
 
 ## 一、安装 Qoder
 
-1. 下载 LoongArch 安装包【也可以到[下载页](https://qoder.com/zh/download)手动下载】：
+1. 下载 LoongArch 安装包：【可以把链接里 `{版本}` 替换成目标版本号进行下载，链接：`https://download.qoder.com.cn/qoder-app/releases/{版本}/Qoder-linux-loongarch64.deb`】，下面以 `0.4.11` 版本为例：
 
 ```sh
-$ wget -c https://download.qoder.com.cn/qoder-app/releases/latest/Qoder-linux-loongarch64.deb 
+$ wget -c https://download.qoder.com.cn/qoder-app/releases/0.4.11/Qoder-linux-loongarch64.deb
 ```
 
 2. 安装：
