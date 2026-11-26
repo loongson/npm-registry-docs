@@ -15,6 +15,7 @@
 - [LoongArch上pi使用指南](./ai-agent/LoongArch上pi使用指南.md)
 - [LoongArch上qoder使用指南](./ai-agent/LoongArch上qoder使用指南.md)
 - [LoongArch上qwen-code使用指南](./ai-agent/LoongArch上qwen-code使用指南.md)
+- [LoongArch上ZCode使用指南](./ai-agent/LoongArch上ZCode使用指南.md)
 
 ### 代码评审工具
 
